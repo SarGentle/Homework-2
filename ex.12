@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n ,k ,i = 1, max = 0;
+	cin >> n;
+	cin >> k;
+	do {
+		if (n == k) {
+			i++;
+			n = k;
+			cin >> k;
+		}
+		else {
+			n = k;
+			cin >> k;
+			if (max < i) {
+				max = i;
+				i = 1;
+			}
+			else {
+				i = 1;
+			}
+		}
+
+	}
+	while (k != 0);
+	cout << endl;
+	cout << max << endl;
+	cin.get();
+	cin.get();
+	return 0;
+}
