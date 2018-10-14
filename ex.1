@@ -1,0 +1,25 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+int main() {
+	int V, t, S;
+	setlocale(LC_ALL, "RUSSIAN");
+	cout << "Введите скорость байкера" << endl;
+	cin >> V;
+	cout << "Введите время поездки" << endl;
+	cin >> t;
+	if (V > 0) {
+		S = V * t;
+		S = (S - (S / 109) * 109);
+	}
+	if (V < 0) {
+		S = 109 + V * t;
+	}
+	if (S < 0) {
+		S = S * (-1);
+	}
+	cout << S << endl;
+	cin.get();
+	cin.get();
+	return 0;
