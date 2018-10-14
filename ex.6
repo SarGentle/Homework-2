@@ -1,0 +1,25 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "RUSSIAN");
+	unsigned int x1, x2, y1, y2;
+	cout << "Введите x1" << endl;
+	cin >> x1;
+	cout << "Введите y1" << endl;
+	cin >> y1;
+	cout << "Введите x2" << endl;
+	cin >> x2;
+	cout << "Введите y2" << endl;
+	cin >> y2;
+	if (x1 == x2 || y1 == y2) {
+		cout << "YES" << endl;
+	}
+	else {
+		cout << "NO" << endl;
+	}
+	cin.get();
+	cin.get();
+	return 0;
+}
