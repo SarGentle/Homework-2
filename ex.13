@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, k, m, i = 0;
+	cin >> n;
+	cin >> k;
+	cin >> m;
+	do {
+		if (n < k  &&  m < k && m != 0) {
+			i++;
+			n = k;
+			k = m;
+			cin >> m;
+		}
+		else {
+			n = k;
+			k = m;
+			cin >> m;
+		}
+
+	} while (m != 0);
+	cout << endl;
+	cout << i << endl;
+	cin.get();
+	cin.get();
+	return 0;
+}
