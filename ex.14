@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n = 0, m = 999, x, y, z;
+	cin >> x;
+	cin >> y;
+	cin >> z;
+	do{
+		if (y > z && x < y){
+			n++;
+			if (y > z && x < y && n > 1) {
+				m = n;
+				n = 0;
+			}
+		}
+		x = y;
+		y = z;
+		cin >> z;
+	} while (z != 0);
+	if (m == 999) {
+		cout << endl << "0" << endl;
+	}
+	else {
+		cout << endl << m << endl;
+	}
+	cin.get();
+	cin.get();
+	return 0;
+}
