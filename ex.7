@@ -1,0 +1,25 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "RUSSIAN");
+	unsigned int H, A, B, t;
+	cout << "Введите высоту столба" << endl;
+	cin >> H;
+	cout << "Введите скорость подъёма" << endl;
+	cin >> A;
+	cout << "Введите скорость спуска" << endl;
+	cin >> B;
+	while (A < B || B > H) {
+		cout << "Введите скорость подъёма" << endl;
+		cin >> A;
+		cout << "Введите скорость спуска" << endl;
+		cin >> B;
+	}
+	t = (H - B) / (A - B);
+	cout << "Поднимется за " << t << "дн." << endl;
+	cin.get();
+	cin.get();
+	return 0;
+}
