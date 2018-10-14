@@ -1,0 +1,38 @@
+#include <iostream> 
+using namespace std;
+
+int main() {
+	int A, B, res, M;
+	int N;
+	N = 0;
+	int *arr = new int[N];
+	cin >> A;
+	B = A;
+	M = N;
+	while (B > 0) {
+		B = B / 10;
+		N++;
+	}
+	for (int i = 0; i < N; i++) {
+		arr[i] = A % 10;
+		A = A / 10;
+	}
+	for (int i = 0; i <= M; i++) {
+		if (arr[i] != arr[N - 1]) {
+			res = 2;
+			N--;
+		}
+		else {
+			res = 1;
+		}
+	}
+	if (res == 2 || A < 0) {
+		cout << "NO" << endl;
+	}
+	else {
+		cout << "YES" << endl;
+	}
+	cin.get();
+	cin.get();
+	return 0;
+}
