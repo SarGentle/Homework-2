@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "char";
+	if (sizeof(char) <= sizeof(short int)) {
+		cout << "->short int";
+	}
+	if (sizeof(short int) <= sizeof(int)) {
+		cout << "->int";
+	}
+	if (sizeof(int) <= sizeof(long int)) {
+		cout << "->long int";
+		cout << "->float";
+	}
+	if (sizeof(float) <= sizeof(double)) {
+		cout << "->double";
+	}
+	if (sizeof(double) <= sizeof(long double)) {
+		cout << "->long double";
+	}
+	cin.get();
+	cin.get();
+	return 0;
+}
