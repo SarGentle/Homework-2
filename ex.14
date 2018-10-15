@@ -9,7 +9,7 @@ int main(){
 	do{
 		if (y > z && x < y){
 			n++;
-			if (y > z && x < y && n > 1) {
+			if (y > z && x < y && n > 1 && m > n) {
 				m = n;
 				n = 0;
 			}
